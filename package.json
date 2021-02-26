@@ -1,0 +1,50 @@
+{
+	"name": "tabtext",
+	"displayName": "tabtext-extension",
+	"description": "Adds tabbed file support VS Code outline view",
+	"version": "0.1.0",
+	"publisher": "jonocodes",
+	"repository": "https://github.com/jonocodes/vscode-tabtext",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"tab",
+		"tree",
+		"outline"
+	],
+	"activationEvents": [
+		"onLanguage:tabtext"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "tabtext",
+				"extensions": [
+					".tat"
+				],
+				"aliases": [
+					"Tabbed Text",
+					"Tab Text"
+				]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.34.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^6.4.0",
+		"typescript": "^4.0.2"
+	}
+}
